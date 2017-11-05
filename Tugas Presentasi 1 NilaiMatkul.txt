@@ -1,0 +1,42 @@
+(* Nama Program : tugassenin 9-10-2017 *)
+(* Nama         : Erdin Awaludin*)
+(* Deskripsi    : menentukan matakuliah yang diremed dan tidak*)
+(* --------------------------------------------------- *)
+uses crt;
+     var
+        a,b,c,d,e:integer;
+        nama,alpro,sbo,rti,bindo,pancasila,jurusan:string;
+begin
+     write('Masukan Nama Anda                : ');readln(nama);
+     write('Masukan Jurusan Anda             : ');readln(jurusan);
+     writeln('=========================================');
+     write('Masukan Nilai Alpro              : ');readln(a);
+     write('Masukan Nilai sbo                : ');readln(b);
+     write('Masukan Nilai rti                : ');readln(c);
+     write('Masukan Nilai Bahasa Indonesia   : ');readln(d);
+     write('Masukan Nilai Pancasila          : ');readln(e);
+     writeln('=========================================');
+     writeln('Hasil Atas Nama                  : ',nama);
+     writeln('Dengan Jurusan                   : ',jurusan);
+           if (a>50)then
+           alpro:=''
+           else alpro:='alpro,';
+           if (b>50)then
+           sbo:=''
+           else sbo:='sbo,';
+           if (c>50)then
+           rti:=''
+           else rti:='rti,';
+           if (d>50)then
+           bindo:=''
+           else bindo:=' Bahasa Indonesia,';
+           if (e>50)then
+           pancasila:=''
+           else pancasila:=' Pancasila,';
+           if (a and b and c and d and e<50) then
+           writeln('Anda mendapat Remedial           : ',alpro,' ',sbo,' ',rti,' ',bindo,' ',pancasila,' ')
+           else
+           if (a and b and c and d and e>50) then
+           writeln('Anda Tidak Mendapatkan Remedial');
+readkey;
+end.
